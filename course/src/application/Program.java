@@ -15,8 +15,6 @@ public class Program {
 		
 		System.out.print("How mamy rooms will be rented?: ");
 		int num = sc.nextInt();
-		int cont = 1;
-		
 		for(int i = 0; i < num; i++) {
 			System.out.println();
 			System.out.println("Rent #" + (i+1) + ": ");
