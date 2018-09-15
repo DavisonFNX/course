@@ -1,0 +1,21 @@
+package application;
+
+import java.util.Scanner;
+
+import entidade.Conta;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Conta nova = new Conta();
+		
+		System.out.println("Enter account number: ");
+		nova.getNumeroConta(sc.nextInt());
+		
+
+		sc.close();
+	}
+
+}

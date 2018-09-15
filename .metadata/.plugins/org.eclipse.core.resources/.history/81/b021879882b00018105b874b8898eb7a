@@ -1,0 +1,44 @@
+package application;
+
+import java.util.Scanner;
+
+import entidade.Conta;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter account number: ");
+		int conta = sc.nextInt();
+		System.out.print("\nEnter account holder: ");
+		String nome = sc.next();
+		System.out.println("\nIs there na initial deposit (y/n)?: ");
+		String resp = sc.next();
+
+		Conta nova = new Conta(conta, nome);
+		
+		System.out.println(resp.equals("y"));
+		System.out.println();
+		if (resp == "y") {
+			System.out.println("Enter initial deposit value: ");
+			double valor = sc.nextDouble();
+			nova.Deposito(valor);
+		}
+		
+		nova.MostrarDados();
+		System.out.println();
+		System.out.print("Enter a deposit value: ");
+		nova.Deposito(sc.nextDouble());
+		nova.MostrarDados();
+		System.out.println();
+		System.out.print("Enter a withdraw value:");
+		nova.Sacar(sc.nextDouble());
+		nova.MostrarDados();
+		
+
+		sc.close();
+	}
+
+}
